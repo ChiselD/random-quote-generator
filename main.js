@@ -32,8 +32,8 @@ let quotes = [
   	source: "Helen Keller"
   },
   {
-  	quote: "In the work of every genius we recognize our own rejected thoughts.",
-  	source: "Johann Wolfgang von Goethe"
+  	quote: "Dreams and reality are opposites. Action synthesizes them.",
+  	source: "Assata Shakur"
   },
   {
   	quote: "Mistakes are a fact of life. It is the response to the error that counts.",

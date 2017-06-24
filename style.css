@@ -1,3 +1,38 @@
 body {
-	background-color: whitesmoke;
+	background-color: eggshell;
+}
+
+.container {
+	border: 1px solid red;
+	width: 100%;
+}
+
+.header {
+	border: 1px solid blue;
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.quotebox {
+	border: 1px solid green;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.quote {
+	border: 1px solid orange;
+}
+
+.attribution {
+	border: 1px solid brown;
+}
+
+.twitter {
+	//
+}
+
+.newquote {
+
 }
