@@ -1,4 +1,6 @@
-let quotes = [
+// my quote library has 12 quotes in it
+
+let quoteLibrary = [
   {
   	quote: "Don't feel entitled to anything you didn't sweat and struggle for.",
   	source: "Marian Wright Edelman"
@@ -44,7 +46,22 @@ let quotes = [
   	source: "Grace Paley"
   },
   {
-  	quote: "Nenne dich nicht arm, weil deine Träume nicht in Erfüllung gegangen sind; wirklich arm ist nur, der nie geträumt hat.",
+  	quote: "Nenne dich nicht arm, weil deine Traeume nicht in Erfuellung gegangen sind; wirklich arm ist nur, der nie getraeumt hat.",
   	source: "Marie von Ebner-Eschenbach"
-  },
+  }
 ];
+
+let numOfQuotes = quoteLibrary.length;
+
+function getRandomNum() {
+  return Math.ceil(Math.random() * numOfQuotes) - 1;
+}
+
+$(".newquote").on("click", function(){
+	let num = getRandomNum();
+  let currentQuote = quoteLibrary[num];
+  $(".quote").html(currentQuote.quote);
+  $(".source").html("- " + currentQuote.source);
+  console.log(currentQuote.source, num);
+});
+

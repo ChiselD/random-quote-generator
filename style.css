@@ -1,23 +1,33 @@
 body {
-	background-color: eggshell;
+	background-image: url(imgs/tannedout.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	font-family: "courier new", courier, sans-serif;
+	color: rgb(126,56,67);
 }
 
 .container {
-	border: 1px solid red;
-	width: 100%;
+	/*border: 1px solid red;*/
+	width: 96%;
+	margin: 0 auto;
+	padding: 50px;
 }
 
 .header {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	width: 40%;
 	margin: 0 auto;
 	text-align: center;
+	font-size: 3em;
+	text-shadow: -2px -2px 2px #490e0e;
 }
 
 .quotebox {
 	border: 1px solid green;
-	width: 50%;
+	width: 40%;
 	margin: 0 auto;
+	padding: 2em 1em;
 	text-align: center;
 }
 
@@ -25,8 +35,9 @@ body {
 	border: 1px solid orange;
 }
 
-.attribution {
+.source {
 	border: 1px solid brown;
+	font-style: italic;
 }
 
 .twitter {
