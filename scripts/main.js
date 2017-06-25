@@ -70,3 +70,26 @@ $(document).ready(displayQuote);
 // run quote-displaying function when you click "get a new quote"
 $(".newquote").on("click", displayQuote);
 
+// function tweetQuote() {
+//   let textToTweet = currentQuote.quote;
+//   if (textToTweet.length > 140) {
+//     alert("Sorry, that text is longer than 140 characters.");
+//   }
+//   else {
+//     let twtLink = "http://twitter.com/home?status=" +encodeURIComponent(textToTweet);
+//     window.open(twtLink, "_blank");
+//   }
+// }
+
+function tweetQuote() {
+  let textToTweet = currentQuote.quote;
+  if (textToTweet.length > 140) {
+    alert("Sorry, that text is longer than 140 characters!");
+  } else {
+    $(".twitter-share-button").setAttr("text", textToTweet);
+  }
+}
+
+$(".twitter").on("click", tweetQuote);
+
+///
