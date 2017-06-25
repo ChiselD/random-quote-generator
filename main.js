@@ -1,4 +1,4 @@
-// my quote library has 12 quotes in it
+// note to self: my quote library has 12 quotes in it
 
 let quoteLibrary = [
   {
@@ -57,11 +57,16 @@ function getRandomNum() {
   return Math.ceil(Math.random() * numOfQuotes) - 1;
 }
 
-$(".newquote").on("click", function(){
-	let num = getRandomNum();
+function displayQuote() {
+  let num = getRandomNum();
   let currentQuote = quoteLibrary[num];
   $(".quote").html(currentQuote.quote);
   $(".source").html("- " + currentQuote.source);
-  console.log(currentQuote.source, num);
-});
+}
+
+// run quote-displaying function when the page loads
+$(document).ready(displayQuote);
+
+// run quote-displaying function when you click "get a new quote"
+$(".newquote").on("click", displayQuote);
 
