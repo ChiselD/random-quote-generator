@@ -11,6 +11,8 @@ input {
 	margin: 2em;
 	border-radius: 0;
 	border: none;
+	font-family: "courier new", courier, sans-serif;
+	font-size: 0.8em;
 	background-color: snow;
 	color: rgb(126,56,67);
 }
@@ -38,7 +40,7 @@ a:hover {
 .header {
 	/*border: 1px solid blue;*/
 	width: 40%;
-	margin: 0 auto 1.5em;
+	margin: -0.5em auto 1.5em;
 	text-align: center;
 	font-size: 3em;
 	text-shadow: -2px -2px 2px #490e0e;
@@ -54,7 +56,7 @@ a:hover {
 }
 
 .quote {
-	//
+	padding: 1em;
 }
 
 .source {
