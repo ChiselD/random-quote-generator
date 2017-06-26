@@ -81,12 +81,20 @@ $(".newquote").on("click", displayQuote);
 //   }
 // }
 
+function encodeQuoteForTweet() {
+  let arr = currentQuote.quote.split(" ");
+  let textToTweet = "";
+  for (let i = 0; i < arr.length; i++) {
+    textToTweet += arr[i];
+    textToTweet += "%20";
+  }
+}
+
 function tweetQuote() {
-  let textToTweet = currentQuote.quote;
   if (textToTweet.length > 140) {
     alert("Sorry, that text is longer than 140 characters!");
   } else {
-    $(".twitter-share-button").setAttr("text", textToTweet);
+    $(".twitter-share-button").setAttr("href", "https://twitter.com/intent/tweet?text=" + textToTweet);
   }
 }
 
