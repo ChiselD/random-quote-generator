@@ -7,27 +7,9 @@ body {
 	color: rgb(126,56,67);
 }
 
-input {
-	margin: 2em;
-	border-radius: 0;
-	border: none;
-	font-family: "courier new", courier, sans-serif;
-	font-size: 0.8em;
-	background-color: snow;
-	color: rgb(126,56,67);
-}
-
-input:focus {
-	outline: darkblue;
-}
-
 a {
 	text-decoration: none;
 	color: rgb(126,56,67);
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 .container {
@@ -57,22 +39,43 @@ a:hover {
 
 .quote {
 	padding: 1em;
+	font-size: 1.2em;
 }
 
 .source {
 	font-style: italic;
-}
-
-.newquote {
-	//
+	margin-bottom: 3em;
 }
 
 .twitter-share-button {
-	//
+	padding: 3px 6px;
+	text-decoration: none;
+}
+
+.newquote, .twitter-share-button {
+	outline: none;
+	margin: 2em;
+	border-radius: 0;
+	border: none;
+	font-family: "courier new", courier, sans-serif;
+	font-size: 0.8em;
+	background-color: snow;
+	color: rgb(126,56,67);
+	cursor: pointer;
+}
+
+.newquote:hover, .twitter-share-button:hover {
+	background-color: rgb(126,56,67);
+	color: snow;
+	font-weight: bold;
 }
 
 .signature {
 	text-align: center;
 	margin-top: 10px;
 	font-size: 0.8em;
+}
+
+.signature a:hover {
+	text-decoration: underline;
 }
