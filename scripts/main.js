@@ -70,34 +70,17 @@ $(document).ready(displayQuote);
 // run quote-displaying function when you click "get a new quote"
 $(".newquote").on("click", displayQuote);
 
-// function tweetQuote() {
-//   let textToTweet = currentQuote.quote;
-//   if (textToTweet.length > 140) {
-//     alert("Sorry, that text is longer than 140 characters.");
-//   }
-//   else {
-//     let twtLink = "http://twitter.com/home?status=" +encodeURIComponent(textToTweet);
-//     window.open(twtLink, "_blank");
-//   }
-// }
-
-function encodeQuoteForTweet() {
-  let arr = currentQuote.quote.split(" ");
-  let textToTweet = "";
-  for (let i = 0; i < arr.length; i++) {
-    textToTweet += arr[i];
-    textToTweet += "%20";
-  }
-}
-
 function tweetQuote() {
+  let textToTweet = $(".quote").text() + " – " + $(".source").text();
+  console.log(textToTweet); // test line
   if (textToTweet.length > 140) {
     alert("Sorry, that text is longer than 140 characters!");
   } else {
-    $(".twitter-share-button").setAttr("href", "https://twitter.com/intent/tweet?text=" + textToTweet);
+    let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(textToTweet);
+    $(".twitter-share-button").setAttr("href", tweet);
   }
 }
 
-$(".twitter").on("click", tweetQuote);
+$(".twitter-share-button").on("click", tweetQuote);
 
 ///
