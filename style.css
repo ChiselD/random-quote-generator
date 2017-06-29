@@ -45,12 +45,12 @@ a {
 	margin-bottom: 3em;
 }
 
-.twitter-share-button {
+.tweet-button {
 	padding: 3px 6px;
 	text-decoration: none;
 }
 
-.newquote, .twitter-share-button {
+.newquote, .tweet-button {
 	outline: none;
 	margin: 2em;
 	border-radius: 0;
@@ -62,7 +62,7 @@ a {
 	cursor: pointer;
 }
 
-.newquote:hover, .twitter-share-button:hover {
+.newquote:hover, .tweet-button:hover {
 	background-color: rgb(126,56,67);
 	color: snow;
 	font-weight: bold;

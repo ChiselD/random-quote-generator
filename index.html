@@ -11,29 +11,14 @@
 			<input type="button" class="newquote" value="get a new quote">
 			<p class="quote"></p>
 			<p class="source"></p>
-			<p><a href="https://twitter.com/intent/tweet" class="twitter-share-button">tweet this quote</a></p>
+			<p><a href="https://twitter.com/intent/tweet?text=" class="tweet-button">tweet this quote</a></p>
 		</div>
 		<div class="signature"><a href="https://github.com/ChiselD/" target="_blank">made by ChiselD</a></div>
 	</div>
 
 <!-- This first script is the Twitter widgets.js file that I got from here:
 https://dev.twitter.com/web/tweet-button -->
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
+<script async src="http://platform.twitter.com/widgets.js"></script>
 
 <script type="text/javascript" src="scripts/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>

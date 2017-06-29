@@ -71,16 +71,15 @@ $(document).ready(displayQuote);
 $(".newquote").on("click", displayQuote);
 
 function tweetQuote() {
-  let textToTweet = $(".quote").text() + " – " + $(".source").text();
-  console.log(textToTweet); // test line
+  let textToTweet = $(".quote").text() + " " + $(".source").text();
   if (textToTweet.length > 140) {
     alert("Sorry, that text is longer than 140 characters!");
   } else {
     let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(textToTweet);
-    $(".twitter-share-button").setAttr("href", tweet);
+    $(".tweet-button").attr("href", tweet);
   }
 }
 
-$(".twitter-share-button").on("click", tweetQuote);
+$(".tweet-button").on("click", tweetQuote);
 
 ///
