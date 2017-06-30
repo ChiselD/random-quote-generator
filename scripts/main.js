@@ -53,15 +53,22 @@ let quoteLibrary = [
 
 let numOfQuotes = quoteLibrary.length;
 
+let prevNum = -1;
+let num = -1;
+
 function getRandomNum() {
   return Math.ceil(Math.random() * numOfQuotes) - 1;
 }
 
 function displayQuote() {
-  let num = getRandomNum();
+  num = getRandomNum();
+  if (num === prevNum) {
+    num = getRandomNum();
+  }
   let currentQuote = quoteLibrary[num];
   $(".quote").html(currentQuote.quote);
   $(".source").html("- " + currentQuote.source);
+  prevNum = num;
 }
 
 // run quote-displaying function when the page loads
