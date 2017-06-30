@@ -56,10 +56,13 @@ let numOfQuotes = quoteLibrary.length;
 let prevNum = -1;
 let num = -1;
 
+// generate a random number to decide which quote to display
 function getRandomNum() {
   return Math.ceil(Math.random() * numOfQuotes) - 1;
 }
 
+// display quote based on that random number
+// if the random number is the same as the previous random number, get a new one
 function displayQuote() {
   num = getRandomNum();
   if (num === prevNum) {
