@@ -74,6 +74,7 @@ function tweetQuote() {
   let textToTweet = $(".quote").text() + " " + $(".source").text();
   if (textToTweet.length > 140) {
     alert("Sorry, that text is longer than 140 characters!");
+    return false;
   } else {
     let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(textToTweet);
     $(".tweet-button").attr("href", tweet);
